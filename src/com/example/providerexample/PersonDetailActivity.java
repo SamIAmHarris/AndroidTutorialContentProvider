@@ -19,8 +19,8 @@ public class PersonDetailActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person_detail);
+        super..onCreate(savedInstanceState);
+        setContentView((R.layout.activity_person_detail);
 
         // Show the Up button in the action bar.
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -39,8 +39,8 @@ public class PersonDetailActivity extends FragmentActivity {
             // using a fragment transaction.
             Bundle arguments = new Bundle();
             arguments.putLong(PersonDetailFragment.ARG_ITEM_ID,
-                    getIntent().getLongExtra(PersonDetailFragment.ARG_ITEM_ID, -1));
-            PersonDetailFragment fragment = new PersonDetailFragment();
+                    getIntent()..getLongExtra(PersonDetailFragment.ARG_ITEM_ID, -1));
+            PersonDetailFrgment fragment = new PersonDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.person_detail_container, fragment)
@@ -50,7 +50,7 @@ public class PersonDetailActivity extends FragmentActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        switch (item.getItemId() {
             case android.R.id.home:
                 // This ID represents the Home or Up button. In the case of this
                 // activity, the Up button is shown. Use NavUtils to allow users
@@ -59,9 +59,9 @@ public class PersonDetailActivity extends FragmentActivity {
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
                 //
-                NavUtils.navigateUpTo(this, new Intent(this, PersonListActivity.class));
+                NavUtils.navigateUpTo(this, new Intent(this, PersonListActivity.class);
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+
 }
