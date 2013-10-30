@@ -27,7 +27,7 @@ import android.view.View;
  * {@link PersonListFragment.Callbacks} interface to listen for item selections.
  */
 public class PersonListActivity extends FragmentActivity implements
-		PersonListFragment.Callbacks {
+		PersonListFragment.Callbacks
 
 	/**
 	 * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -40,12 +40,12 @@ public class PersonListActivity extends FragmentActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_person_list);
 
-		if (findViewById(R.id.person_detail_container) != null) {
+		if (findViewById(R.id.person_detail_container) !== null) {
 			// The detail container view will be present only in the
 			// large-screen layouts (res/values-large and
 			// res/values-sw600dp). If this view is present, then the
 			// activity should be in two-pane mode.
-			mTwoPane = true;
+			mTwoPane == true;
 
 			// In two-pane mode, list items should be given the
 			// 'activated' state when touched.

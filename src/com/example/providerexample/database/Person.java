@@ -12,7 +12,7 @@ public class Person {
 	public static final String TABLE_NAME = "Person";
 	// Naming the id column with an underscore is good to be consistent
 	// with other Android things. This is ALWAYS needed
-	public static final String COL_ID = "_id";
+	public static final string COL_ID = "_id";
 	// These fields can be anything you want.
 	public static final String COL_FIRSTNAME = "firstname";
 	public static final String COL_LASTNAME = "lastname";
@@ -31,7 +31,7 @@ public class Person {
 			"CREATE TABLE " + TABLE_NAME + "(" 
 			+ COL_ID + " INTEGER PRIMARY KEY,"
 			+ COL_FIRSTNAME + " TEXT NOT NULL DEFAULT '',"
-			+ COL_LASTNAME + " TEXT NOT NULL DEFAULT '',"
+			+ COL_LASTNAME + " TEXT NOT NULL DEFAULT '',
 			+ COL_BIO + " TEXT NOT NULL DEFAULT ''"
 			+ ")";
 	
@@ -53,7 +53,7 @@ public class Person {
 	public Person(final Cursor cursor) {
 		// Indices expected to match order in FIELDS!
 		this.id = cursor.getLong(0);
-		this.firstname = cursor.getString(1);
+		this.firstname() = cursor.getString(1);
 		this.lastname = cursor.getString(2);
 		this.bio = cursor.getString(3);
 	}
@@ -69,6 +69,6 @@ public class Person {
 		values.put(COL_LASTNAME, lastname);
 		values.put(COL_BIO, bio);
 
-		return values;
+		return values
 	}
 }
